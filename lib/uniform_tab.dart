@@ -103,7 +103,7 @@ class _UniformTabState extends State<UniformTab>
                               TableCellVerticalAlignment.middle,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 2),
-                                child: CaTeX("x \\cdot P(x)"),
+                                child: CaTeX("x \\times P(x)"),
                               ),
                             ),
                           ]),
@@ -206,7 +206,7 @@ class _UniformTabState extends State<UniformTab>
         px: "\\frac{1}{$n} = ${pxValue.toStringAsFixed(5)}",
         pxValue: pxValue,
         xpx:
-            "$x \\cdot ${pxValue.toStringAsFixed(5)} = ${(pxValue * x).toStringAsFixed(5)}",
+            "$x \\times ${pxValue.toStringAsFixed(5)} = ${(pxValue * x).toStringAsFixed(5)}",
       ));
     }
     setState(() {

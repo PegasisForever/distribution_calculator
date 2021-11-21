@@ -155,7 +155,7 @@ class _HypergeometricTabState extends State<HypergeometricTab>
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 2),
                                 child: CaTeX(
-                                    "P(x) = \\frac{_{a}C_{x} \\cdot _{n-a}C_{r-x}}{_{n}C_{r}}"),
+                                    "P(x) = \\frac{_{a}C_{x} \\times _{n-a}C_{r-x}}{_{n}C_{r}}"),
                               ),
                             ),
                             TableCell(
@@ -164,7 +164,7 @@ class _HypergeometricTabState extends State<HypergeometricTab>
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 2),
-                                child: CaTeX("x \\cdot P(x)"),
+                                child: CaTeX("x \\times P(x)"),
                               ),
                             ),
                           ]),
@@ -279,15 +279,15 @@ class _HypergeometricTabState extends State<HypergeometricTab>
       var pxValue = top / bottom;
       data.add(_TableRowData(
         x: x.toInt(),
-        px: "\\frac{_{$a}C_{$x} \\cdot _{$n-$a}C_{$r-$x}}{_{$n}C_{$r}} = \\frac{$top}{$bottom} = ${pxValue.toStringAsFixed(5)}",
+        px: "\\frac{_{$a}C_{$x} \\times _{$n-$a}C_{$r-$x}}{_{$n}C_{$r}} = \\frac{$top}{$bottom} = ${pxValue.toStringAsFixed(5)}",
         pxValue: pxValue,
         xpx:
-            "$x \\cdot ${pxValue.toStringAsFixed(5)} = ${(pxValue * x).toStringAsFixed(5)}",
+            "$x \\times ${pxValue.toStringAsFixed(5)} = ${(pxValue * x).toStringAsFixed(5)}",
       ));
     }
     setState(() {
       exp =
-          "E(X) = \\frac{r \\cdot a}{n} = \\frac{$r \\cdot $a}{$n} = ${(r * a / n).toStringAsFixed(5)}";
+          "E(X) = \\frac{r \\times a}{n} = \\frac{$r \\times $a}{$n} = ${(r * a / n).toStringAsFixed(5)}";
       isValid = true;
     });
   }

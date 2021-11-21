@@ -140,7 +140,7 @@ class _BinomialTabState extends State<BinomialTab>
                               TableCellVerticalAlignment.middle,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 2),
-                                child: CaTeX("P(x) = _{n}C_{x}\\cdot p^{x}\\cdot q^{n-x}"),
+                                child: CaTeX("P(x) = _{n}C_{x}\\times p^{x}\\times q^{n-x}"),
                               ),
                             ),
                             TableCell(
@@ -148,7 +148,7 @@ class _BinomialTabState extends State<BinomialTab>
                               TableCellVerticalAlignment.middle,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 2),
-                                child: CaTeX("x \\cdot P(x)"),
+                                child: CaTeX("x \\times P(x)"),
                               ),
                             ),
                           ]),
@@ -257,16 +257,16 @@ class _BinomialTabState extends State<BinomialTab>
       var pxValue = combine(n, x) * p.pow(x.toInt()) * q.pow((n - x).toInt());
       data.add(_TableRowData(
         x: x.toInt(),
-        px: "_{$n}C_{$x}\\cdot ${p.toStringAsFixed(5)}^{$x}\\cdot ${q.toStringAsFixed(5)}^{$n-$x} = ${pxValue
+        px: "_{$n}C_{$x}\\times ${p.toStringAsFixed(5)}^{$x}\\times ${q.toStringAsFixed(5)}^{$n-$x} = ${pxValue
             .toStringAsFixed(5)}",
         pxValue: pxValue,
         xpx:
-        "$x \\cdot ${pxValue.toStringAsFixed(5)} = ${(pxValue * x)
+        "$x \\times ${pxValue.toStringAsFixed(5)} = ${(pxValue * x)
             .toStringAsFixed(5)}",
       ));
     }
     setState(() {
-      exp = "E(X) = n \\cdot p = $n \\cdot ${p.toStringAsFixed(5)} = ${(p * n).toStringAsFixed(5)}";
+      exp = "E(X) = n \\times p = $n \\times ${p.toStringAsFixed(5)} = ${(p * n).toStringAsFixed(5)}";
       isValid = true;
     });
   }
