@@ -1,3 +1,3 @@
 # Distribution Calculator
 
-[https://dev.pegasis.site/distribution_calculator/](https://dev.pegasis.site/distribution_calculator/)
+Calculate permutations, combinations, uniform distributions, binomial distributions, and hypergeometric distributions.
